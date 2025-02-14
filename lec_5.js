@@ -32,6 +32,11 @@ app.get('/students/:id', (req, res) => {
  
 });
 
+//create a new student using get api pass just name 
+//and age as a parameter and push to the studentsData array
+
+
+
 app.get('/hello', (req, res) => {
     res.send('data on hello route');
 });
