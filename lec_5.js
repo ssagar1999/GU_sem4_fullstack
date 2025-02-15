@@ -1,6 +1,26 @@
 let express = require('express'); //require express
 let app = express(); // use express
 let a = '/';
+let os = require('os');
+let fs = require('fs');
+
+console.log(process.pid)
+
+fs.readFile('./file.txt', (err, data) =>{
+  console.log(data.toString());  
+} )
+
+fs.writeFile('file2.txt', 'hdsgdkzkxkhadkhasg',(err) =>{
+    if(err){
+        console.log(err)
+    }
+})
+
+fs.unlink('file.txt', (d) =>{
+    console.log('file deleted')
+})
+console.log(os.cpus().length);
+console.log(os.platform())
 
 let studentsData = [
     {name: 'geeta', age: 20, id:1},
