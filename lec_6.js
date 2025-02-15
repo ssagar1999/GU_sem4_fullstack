@@ -16,6 +16,15 @@ let app = express();
 app.get('/', (req, res) =>{
     console.log('hello world')
 })
+
+app.get('/blocking', (req, res) =>{
+
+    for(let i=0; i<100_000_000_000; i++){
+
+    }
+    res.send('blocking api response')
+    
+})
 app.get('/helloall', (req, res) =>{
     console.log('hello all api')
 })
